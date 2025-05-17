@@ -46,7 +46,7 @@ img {
 
 .section-title {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 16px;
 }
 
@@ -75,6 +75,27 @@ img {
 .btn-main:hover {
   background: #e94e97;
   transform: translateY(-2px);
+}
+
+.btn-workshop {
+  background-color: var(--primary);
+  font-size: 1rem;
+  padding: 10px 25px;
+}
+
+.workshop-explore-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-workshop-main {
+  background-color: var(--primary);
+  font-size: 1.1rem;
+  padding: 15px 40px;
+  border-radius: 50px;
 }
 
 /* Header */
@@ -209,13 +230,17 @@ img {
 .workshop {
   padding: 60px 0;
   background: var(--light);
+  position: relative;
+  overflow: hidden;
 }
 
 .workshop-row {
   display: flex;
   gap: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 120px;
   align-items: flex-start;
+  position: relative;
+  z-index: 1;
 }
 
 .workshop-row:last-child {
@@ -228,43 +253,35 @@ img {
 }
 
 .workshop-info-inner {
-  background-color: var(--secondary);
   border-radius: 30px;
-  padding: 30px;
+  padding: 40px 30px;
   position: relative;
 }
 
-.workshop-info-inner::before {
-  content: '';
-  position: absolute;
-  bottom: -20px;
-  left: 20px;
-  width: 60px;
-  height: 60px;
-  background-color: var(--primary);
-  border-radius: 50%;
-  z-index: 1;
-  opacity: 0.2;
-}
-
 .workshop-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #222;
 }
 
 .workshop-info ul {
-  margin: 0 0 24px 20px;
+  margin: 0 0 30px 0;
+  list-style: none;
 }
 
 .workshop-info li {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 5px;
 }
 
 .workshop-list {
   flex: 2;
   display: grid;
-  gap: 24px;
+  gap: 30px;
+  position: relative;
 }
 
 .tufting-grid {
@@ -272,12 +289,12 @@ img {
 }
 
 .candle-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .workshop-card {
   background: var(--light);
-  border-radius: 20px;
+  border-radius: 30px;
   box-shadow: var(--box-shadow);
   overflow: hidden;
   position: relative;
@@ -285,37 +302,31 @@ img {
 }
 
 .workshop-card:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .workshop-card img {
   width: 100%;
+  height: 220px;
   object-fit: cover;
-  border-radius: 20px 20px 0 0;
+  border-radius: 30px 0 0;
 }
 
 .workshop-card-content {
-  padding: 16px;
+  padding: 20px;
   text-align: center;
   position: relative;
 }
 
+.workshop-card-content h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
 .price {
-  position: absolute;
-  top: -20px;
-  right: 20px;
-  background-color: var(--primary);
-  color: white;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 0.9rem;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(255, 92, 167, 0.3);
-  transform: rotate(-5deg);
+  font-size: 1rem;
+  color: #757575;
 }
 
 /* News Section */
@@ -596,4 +607,63 @@ footer {
   .footer-cols {
     gap: 32px;
   }
-} 
+}
+
+@media (min-width: 1024px) {
+  
+}
+
+@media (min-width: 769px) {
+  .workshop-card {
+    width: 308px;
+  }
+  
+  .candle-grid {
+    /* position: absolute; */
+  }
+
+  /* Tạo hiệu ứng so le cho các thẻ */
+  .tufting-grid .workshop-card:nth-child(1) {
+    transform: translateY(90px);
+  }
+
+  .tufting-grid .workshop-card:nth-child(2) {
+    transform: translate(-65px, -20px)
+  }
+
+  .tufting-grid .workshop-card:nth-child(3) {
+    transform: translate(65px, 90px)
+  }
+
+  .tufting-grid .workshop-card:nth-child(4) {
+    transform: translateY(-20px);
+  }
+
+  .candle-grid .workshop-card:nth-child(1) {
+    width: 516px;
+    position: absolute;
+    top: 44%;
+    left: -52%;
+  }
+
+  .candle-grid .workshop-card:nth-child(2) {
+    transform: translate(165px,60px);
+    height: fit-content;
+  }
+
+  .candle-grid .workshop-card:nth-child(3) {
+    transform: translate(120px, 0);
+  }
+
+  .candle-grid .workshop-card:nth-child(3) img {
+    height: 581px;
+  }
+
+  .candle-grid .workshop-card:nth-child(4) {
+    transform: translate(165px, -292px);
+  }
+
+  .workshop-info-inner {
+    margin-top: 60%;
+  }
+}
