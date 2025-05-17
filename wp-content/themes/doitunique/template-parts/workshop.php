@@ -81,7 +81,7 @@
           </div>
         </div>
       </div>
-      <div class="workshop-explore-more" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: 180px;">
+      <div class="workshop-explore-more">
         <a href="#" class="btn-main btn-workshop-main">Explore More</a>
       </div> 
     </div>
