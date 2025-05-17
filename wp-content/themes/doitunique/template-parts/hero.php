@@ -7,7 +7,8 @@
     </div>
     <div class="hero-img">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/yarn-basket.jpg" alt="Yarn">
+      <div class="circle-bg"></div>
+      <div class="corner-bg"></div>
     </div>
-    <div class="hero-bg"></div>
   </div>
 </section> 
