@@ -1,0 +1,540 @@
+/**
+ * Custom CSS for DoitUnique Blocks Theme
+ */
+
+/* Basic Globals */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #666;
+}
+
+/* Buttons */
+.btn-main, .wp-block-button__link {
+  background: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--light);
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 92, 167, 0.3);
+}
+
+.btn-main:hover, .wp-block-button__link:hover {
+  background: #e94e97;
+  transform: translateY(-2px);
+}
+
+/* Mobile Menu */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 101;
+}
+
+.toggle-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #222;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.mobile-menu-toggle.active .toggle-bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-toggle.active .toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active .toggle-bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Header Icons */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.instagram-icon, .language-icon {
+  color: var(--wp--preset--color--dark);
+  transition: color 0.2s;
+}
+
+.instagram-icon:hover, .language-icon:hover {
+  color: var(--wp--preset--color--primary);
+}
+
+/* Hero Background */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: var(--wp--preset--color--dark);
+}
+
+.hero-bg {
+  position: relative;
+  z-index: 0;
+}
+
+.circle-bg {
+  position: absolute;
+  top: -120px;
+  left: -100px;
+  width: 600px;
+  height: 600px;
+  background-color: #f8e8fa;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.corner-bg {
+  position: absolute;
+  bottom: -150px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background-color: #fcf9e9;
+  border-radius: 50% 0 0 0;
+  z-index: -1;
+}
+
+/* Workshop Decorations */
+.workshop {
+  position: relative;
+  overflow: hidden;
+}
+
+.workshop-info-inner {
+  padding: 40px 30px;
+  border-radius: 30px;
+  background-color: var(--wp--preset--color--secondary);
+}
+
+.workshop-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.workshop-features {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.workshop-features li {
+  margin-bottom: 12px;
+}
+
+.workshop-decorations {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.workshop-circle-bg {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #f8e8fa;
+  top: 5%;
+  left: -100px;
+  z-index: 0;
+}
+
+.workshop-corner-bg {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50% 0 0 0;
+  background-color: #fcf9e9;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+/* Workshop Cards */
+.workshop-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.workshop-card-content {
+  padding: 20px;
+}
+
+.workshop-card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+}
+
+.workshop-img {
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* Button Styles */
+.btn-workshop {
+  font-size: 1rem;
+  padding: 10px 25px;
+}
+
+.workshop-explore-more {
+  margin-top: 70px;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-workshop-main {
+  font-size: 1.1rem;
+  padding: 15px 40px;
+  border-radius: 50px;
+}
+
+/* Testimonial Styles */
+.testimonial {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.testimonial-corner-bg {
+  position: absolute;
+  top: 50%;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background-color: #fcf9e9;
+  border-radius: 0 0 0 300px;
+  z-index: 0;
+}
+
+.circle-accent {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  bottom: -15px;
+  left: -15px;
+  background-color: var(--wp--preset--color--primary);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.testimonial-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--wp--preset--color--dark);
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.testimonial-avatars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.group-people {
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  z-index: 2;
+}
+
+.people-img {
+  max-width: 450px;
+  height: auto;
+}
+
+.testimonial-pagination {
+  margin-top: 40px;
+}
+
+.pagination-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.2s;
+  margin: 0 6px;
+}
+
+.pagination-dot.active {
+  background-color: var(--wp--preset--color--primary);
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: var(--wp--preset--color--light);
+  padding-top: 80px;
+  padding-bottom: 30px;
+  border-top: 1px solid var(--wp--preset--color--gray);
+}
+
+.footer-logo p {
+  color: #666;
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--wp--preset--color--dark);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 20px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  color: #555;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+}
+
+.social-icon:hover {
+  background-color: var(--wp--preset--color--primary);
+  color: white;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid var(--wp--preset--color--gray);
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Staggered Workshop Cards for Desktop */
+@media (min-width: 769px) {
+  .tufting-grid .workshop-card:nth-child(1) {
+    transform: translateY(30px);
+  }
+  
+  .tufting-grid .workshop-card:nth-child(2) {
+    transform: translateY(-20px);
+  }
+  
+  .tufting-items:last-child .workshop-card:nth-child(1) {
+    transform: translateY(-40px);
+  }
+  
+  .tufting-items:last-child .workshop-card:nth-child(2) {
+    transform: translateY(0px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .workshop-circle-bg,
+  .workshop-corner-bg {
+    opacity: 0.5;
+  }
+  
+  .circle-bg,
+  .corner-bg {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    z-index: 100;
+    transition: 0.3s;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    padding: 80px 20px 20px;
+  }
+  
+  .main-nav.show {
+    right: 0;
+  }
+  
+  .main-nav ul {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  .header-icons {
+    position: absolute;
+    right: 60px;
+    top: 18px;
+  }
+  
+  .tufting-grid .workshop-card,
+  .tufting-items:last-child .workshop-card:nth-child(1),
+  .tufting-items:last-child .workshop-card:nth-child(2) {
+    transform: translateY(0);
+  }
+  
+  .testimonial-main-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  
+  .testimonial-content {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .group-people {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .people-img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .workshop-title {
+    font-size: 2rem;
+  }
+  
+  .testimonial-name {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .workshop-title {
+    font-size: 1.8rem;
+  }
+  
+  .workshop-card-content h3 {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .testimonial-main-wrapper {
+    max-width: 200px;
+  }
+  
+  .circle-accent {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .testimonial-name {
+    font-size: 1.2rem;
+  }
+  
+  .footer-cols {
+    flex-direction: column;
+  }
+  
+  .footer-col {
+    margin-bottom: 30px;
+  }
+  
+  .footer-social {
+    flex-wrap: wrap;
+  }
+} 
